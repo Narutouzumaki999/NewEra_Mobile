@@ -1,0 +1,1 @@
+<scroll-view style="{{'height:'+(height)+';'}}" scroll-y="{{true}}" class="data-v-d0345b40"><view class="volunteerintro data-v-d0345b40"><rich-text nodes="{{content}}" class="data-v-d0345b40"></rich-text></view></scroll-view>

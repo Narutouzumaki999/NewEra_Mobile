@@ -1,0 +1,60 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/Login/Login",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/Home/Home",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/NewsPreview/NewsPreview",
+			"style": {
+				"navigationBarTitleText": "NEWS"
+			}
+		}, {
+			"path": "pages/Volunteer/Volunteer",
+			"style": {
+				"navigationBarTitleText": "志愿队"
+			}
+		}, {
+			"path": "pages/VolunteerPreview/VolunteerPreview",
+			"style": {
+				"navigationBarTitleText": "Volunteer"
+			}
+		}, {
+			"path": "pages/Practice/Practice",
+			"style": {
+				"navigationBarTitleText": "实践所汇总"
+			}
+		}, {
+			"path": "pages/PracticePreview/PracticePreview",
+			"style": {}
+		}, {
+			"path": "pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview",
+			"style": {}
+		}, {
+			"path": "pages/ModelRecommend/ModelRecommend",
+			"style": {
+				"navigationBarTitleText": "被推荐人信息"
+			}
+		}, {
+			"path": "pages/VolunteerHelp/VolunteerHelp",
+			"style": {
+				"navigationBarTitleText": "志愿求助"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "新时代文明中心",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

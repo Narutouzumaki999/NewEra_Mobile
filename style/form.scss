@@ -1,0 +1,47 @@
+$main-color: rgb(160, 80, 80);
+
+.form {
+	padding: 20rpx;
+
+	.title {
+		display: flex;
+		align-items: center;
+		padding: 20rpx 0rpx;
+
+		.titleborder {
+			flex: 1;
+			border-bottom: 2px solid $main-color;
+		}
+
+		.titletext {
+			flex: 1;
+			color: $main-color;
+		}
+	}
+
+	.form-item {
+		.formlabel {
+			font-size: 16px;
+			font-weight: bold;
+			padding: 10rpx 20rpx;
+		}
+		.forminput {
+			display: flex;
+			border-radius: 5px;
+			background-color: #EEEEEE;
+			padding: 10rpx 20rpx;
+			min-height: 40px;
+			align-items: center;
+			u-radio-group {
+				width: 100%;
+			}
+		}
+	}
+	
+	.submitbtn {
+		margin-top: 20rpx;
+		background-color: $main-color !important;
+		color: white !important;
+		font-weight: bolder !important;
+	}
+}

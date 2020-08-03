@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/Login/Login",
+    "pages/Home/Home",
+    "pages/NewsPreview/NewsPreview",
+    "pages/Volunteer/Volunteer",
+    "pages/VolunteerPreview/VolunteerPreview",
+    "pages/Practice/Practice",
+    "pages/PracticePreview/PracticePreview",
+    "pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview",
+    "pages/ModelRecommend/ModelRecommend",
+    "pages/VolunteerHelp/VolunteerHelp"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "新时代文明中心",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap10.json"
+}

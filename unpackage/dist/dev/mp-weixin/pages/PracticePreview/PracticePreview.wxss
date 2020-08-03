@@ -1,0 +1,8 @@
+.practice .proimg.data-v-5c48fa3c {
+  text-align: center;
+  padding: 20rpx;
+}
+.practice .proimg image.data-v-5c48fa3c {
+  height: 300rpx;
+}
+

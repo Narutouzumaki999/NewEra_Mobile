@@ -1,0 +1,22 @@
+.login {
+  width: 100wh;
+  height: 100vh;
+}
+.login .title {
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 20vh;
+}
+.login .login-main {
+  margin-top: 10vh;
+  padding: 20px;
+}
+.login .login-main .u-border-bottom::after {
+  border-bottom: 1px solid #333 !important;
+}
+.login .login-action {
+  margin-top: 30px;
+  padding: 20px;
+}
+

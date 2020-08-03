@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "被推荐人信息",
+  "usingComponents": {
+    "u-input": "/uview-ui/components/u-input/u-input",
+    "u-radio-group": "/uview-ui/components/u-radio-group/u-radio-group",
+    "u-radio": "/uview-ui/components/u-radio/u-radio",
+    "u-action-sheet": "/uview-ui/components/u-action-sheet/u-action-sheet",
+    "u-button": "/uview-ui/components/u-button/u-button"
+  }
+}

@@ -1,0 +1,35 @@
+.swiperItem {
+	.newsItem {
+		padding: 20rpx;
+		border-bottom: 1px solid #aaa;
+		display: flex;
+		justify-content: space-between;
+
+		.newsInfo {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0px 10rpx;
+
+			.title {
+				font-size: 16px;
+				font-weight: bolder;
+			}
+
+			.source {
+				font-size: 12px;
+				color: #bbb;
+			}
+		}
+
+		image {
+			min-width: 250rpx;
+			max-width: 250rpx;
+			height: 135rpx;
+		}
+		
+		.activitybtn {
+			margin: unset;
+		}
+	}
+}
