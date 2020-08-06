@@ -1,1 +1,0 @@
-<view class="previewItem"><view class="title">{{title}}</view><view class="content"><rich-text nodes="{{content}}"></rich-text></view></view>

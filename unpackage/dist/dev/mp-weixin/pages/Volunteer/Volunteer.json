@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "志愿队",
-  "usingComponents": {
-    "u-tabs-swiper": "/uview-ui/components/u-tabs-swiper/u-tabs-swiper",
-    "volunteer-intro": "/pages/Volunteer/VolunteerIntro",
-    "volunteer-squadron": "/pages/Volunteer/VolunteerSquadron",
-    "volunteer-service": "/pages/Volunteer/VolunteerService"
-  }
-}
