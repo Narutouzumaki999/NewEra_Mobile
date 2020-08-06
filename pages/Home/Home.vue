@@ -121,7 +121,8 @@
 					id: res_column.data.data[i].id
 				})
 		},
-		onBackPress() {
+		onBackPress(options) {
+			console.log(options)
 			return false
 		},
 		components: {
@@ -151,19 +152,19 @@
 				flex: 1;
 
 				.btn1 {
-					background-image: url(../../static/图标1.png);
+					background-image: url(../../static/btn1.png);
 				}
 
 				.btn2 {
-					background-image: url(../../static/图标2.png);
+					background-image: url(../../static/btn2.png);
 				}
 
 				.btn3 {
-					background-image: url(../../static/图标3.png);
+					background-image: url(../../static/btn3.png);
 				}
 
 				.btn4 {
-					background-image: url(../../static/图标4.png);
+					background-image: url(../../static/btn4.png);
 				}
 
 				.imgbtn {

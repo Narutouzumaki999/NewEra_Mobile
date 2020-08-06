@@ -1,9 +1,9 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview"],{
 
 /***/ 86:
-/*!***********************************************************************************************************************************!*\
-  !*** E:/China/NewEra/NeweraMobile/main.js?{"page":"pages%2FPracticePreview%2FPracticeActivityPreview%2FPracticeActivityPreview"} ***!
-  \***********************************************************************************************************************************/
+/*!************************************************************************************************************************************!*\
+  !*** E:/China/NewEra/NewEra_Mobile/main.js?{"page":"pages%2FPracticePreview%2FPracticeActivityPreview%2FPracticeActivityPreview"} ***!
+  \************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17,9 +17,9 @@ createPage(_PracticeActivityPreview.default);
 /***/ }),
 
 /***/ 87:
-/*!**************************************************************************************************************!*\
-  !*** E:/China/NewEra/NeweraMobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue ***!
-  \**************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** E:/China/NewEra/NewEra_Mobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -56,9 +56,9 @@ component.options.__file = "pages/PracticePreview/PracticeActivityPreview/Practi
 /***/ }),
 
 /***/ 88:
-/*!*********************************************************************************************************************************************!*\
-  !*** E:/China/NewEra/NeweraMobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=template&id=58393ba2& ***!
-  \*********************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************!*\
+  !*** E:/China/NewEra/NewEra_Mobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=template&id=58393ba2& ***!
+  \**********************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -78,9 +78,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 89:
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/China/NewEra/NeweraMobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=template&id=58393ba2& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/China/NewEra/NewEra_Mobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=template&id=58393ba2& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -118,9 +118,9 @@ render._withStripped = true
 /***/ }),
 
 /***/ 90:
-/*!***************************************************************************************************************************************!*\
-  !*** E:/China/NewEra/NeweraMobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************/
+/*!****************************************************************************************************************************************!*\
+  !*** E:/China/NewEra/NewEra_Mobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -134,9 +134,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 91:
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/China/NewEra/NeweraMobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!E:/China/NewEra/NewEra_Mobile/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
