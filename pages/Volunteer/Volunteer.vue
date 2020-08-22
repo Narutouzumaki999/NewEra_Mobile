@@ -5,7 +5,7 @@
 		</view>
 		<swiper :style="{height: tabsSwiper}" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
 			<swiper-item>
-				<VolunteerIntro></VolunteerIntro>
+				<VolunteerIntro @change-tab="changeTab"></VolunteerIntro>
 			</swiper-item>
 			<swiper-item>
 				<VolunteerSquadron></VolunteerSquadron>
@@ -50,10 +50,13 @@
 				this.$refs.uTabs.setFinishCurrent(current)
 				this.swiperCurrent = current
 				this.tabsCurrent = current
+			},
+			changeTab(index) {
+				document.querySelector(`.UEl_${index}`).click()
 			}
 		},
 		mounted() {
-			this.tabsSwiper = `calc(100vh - 44px - ${uni.getSystemInfoSync().windowTop}px)`
+			this.tabsSwiper = `calc(${uni.getSystemInfoSync().windowHeight}px - 80rpx)`
 		},
 		components: {
 			VolunteerIntro,

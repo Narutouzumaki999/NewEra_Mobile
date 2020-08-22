@@ -1,12 +1,13 @@
 <template>
-	<scroll-view scroll-y :style="{height: height}" class="swiperItem">
+	<scroll-view scroll-y :style="{height: '100%'}" class="swiperItem" @scrolltolower="onreachBottom">
 		<view class="newsItem" v-for="(item, index) in a_showList" :key="index" @click="onPreviewVolunteer(item)">
 			<view class="newsInfo">
 				<view class="title">{{item.title}}</view>
 				<view class="source">{{item.address}}</view>
 			</view>
-			<image :src="item.image"></image>
+			<u-image :src="item.image" mode="heightFix" width="250rpx" height="135rpx" />
 		</view>
+		<u-loadmore status="loading" icon-type="flower" :load-text="loadText" v-if="loadingShow" />
 	</scroll-view>
 </template>
 
@@ -14,8 +15,12 @@
 	export default {
 		data() {
 			return {
+				allCount: 0,
 				a_showList: [],
-				height: 0
+				loadingShow: false,
+				loadText: {
+					loading: this.$message_loading
+				}
 			}
 		},
 		methods: {
@@ -25,19 +30,35 @@
 					animationType: 'zoom-fade-out',
 					animationDuration: 400
 				})
+			},
+			async onReload(startRow) {
+				const data = {
+					volunteerType: 'squadron',
+					startRow: startRow
+				}
+				const res = await this.$myRequest({
+					url: '/app/volunteer/getVolunteerList',
+					data: data
+				})
+				this.a_showList = this.a_showList.concat(res.data.data)
+			},
+			async onreachBottom() {
+				if (this.allCount > this.a_showList.length) {
+					this.loadingShow = true
+					await this.onReload(this.a_showList.length)
+					this.loadingShow = false
+				}
 			}
 		},
 		async mounted() {
-			const data = {
-				volunteerType: 'squadron',
-				startRow: 0
-			}
 			const res = await this.$myRequest({
-				url: '/app/volunteer/getVolunteerList',
-				data: data
+				url: '/app/volunteer/getVolunteerCount',
+				data: {
+					volunteerType: 'squadron'
+				}
 			})
-			this.a_showList = res.data.data
-			this.height = `calc(100vh - 44px - ${uni.getSystemInfoSync().windowTop}px)`
+			this.allCount = res.data.data
+			this.onReload(0)
 		}
 	}
 </script>

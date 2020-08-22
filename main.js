@@ -3,13 +3,16 @@ import App from './App'
 import {
 	myRequest,
 	chgSpecialToText,
-	checkAuth
 } from './utils/api.js'
+import './router'
 
 Vue.prototype.$myRequest = myRequest
 Vue.prototype.$chgSpecialToText = chgSpecialToText
-Vue.prototype.$checkAuth = checkAuth
-Vue.prototype.$message_inputdata = '자료를 모두 입력하시오'
+Vue.prototype.$message_inputdata = '请插入所有字段'
+Vue.prototype.$message_errorsave = '添加数据失败'
+Vue.prototype.$message_successsave = '报名成功'
+Vue.prototype.$message_loading = '努力加载中'
+Vue.prototype.$message_noactivityvolunteer = '您已经是志愿者，不能重新申请'
 Vue.config.productionTip = false
 
 App.mpType = 'app'

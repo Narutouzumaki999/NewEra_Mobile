@@ -10,6 +10,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			padding: 0px 10rpx;
+			width: calc(100% - 250rpx);
 
 			.title {
 				font-size: 16px;
@@ -21,15 +22,14 @@
 				color: #bbb;
 			}
 		}
-
-		image {
-			min-width: 250rpx;
-			max-width: 250rpx;
-			height: 135rpx;
-		}
 		
 		.activitybtn {
 			margin: unset;
+		}
+		
+		.afterBtn {
+			color: #FFFFFF;
+			background-color: rgb(153, 153, 153);
 		}
 	}
 }

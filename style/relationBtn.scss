@@ -1,0 +1,40 @@
+.relationBtn {
+	margin-top: 20px;
+
+	uni-button {
+		width: 100px !important;
+		height: 100px !important;
+	}
+
+	.lineBtnGroup {
+		text-align: center;
+
+		.firstBtnGroup {
+			display: inline-flex;
+
+			.rotateLine1,
+			.rotateLine2 {
+				width: 6rem;
+				height: 0.085rem;
+				border-top: 0.2rem solid rgb(205, 226, 250);
+				margin-top: 110px;
+			}
+
+			.rotateLine1 {
+				margin-right: -60px;
+				transform: rotate(-30deg);
+			}
+
+			.rotateLine2 {
+				margin-left: -60px;
+				transform: rotate(30deg);
+			}
+
+		}
+	}
+
+	.secondBtnGroup {
+		margin: 10px 0px 20px;
+		display: flex;
+	}
+}

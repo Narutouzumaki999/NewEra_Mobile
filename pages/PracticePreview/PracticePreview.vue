@@ -1,7 +1,7 @@
 <template>
 	<view class="practice">
 		<view class="proimg">
-			<image :src="practice.image" mode="aspectFit"></image>
+			<u-image :src="practice.image" mode="aspectFit" height="300rpx"></u-image>
 		</view>
 		<view>
 			<u-tabs-swiper ref="uTabs" :list="tabsList" :current="tabsCurrent" @change="tabsChange" swiper-width="750" :isScroll="false"></u-tabs-swiper>
@@ -32,10 +32,10 @@
 						name: '简介'
 					},
 					{
-						name: '理论发布'
+						name: '活动发布'
 					},
 					{
-						name: '实践所活动'
+						name: '活动展示'
 					}
 				],
 				tabsSwiper: 0,
@@ -73,7 +73,7 @@
 			})
 			this.b_loading = true
 			this.tabsSwiper =
-				`calc(${uni.getSystemInfoSync().windowHeight}px - 340rpx - ${uni.getSystemInfoSync().windowTop}px)`
+				`calc(${uni.getSystemInfoSync().windowHeight}px - 420rpx)`
 		},
 		components: {
 			PracticeInfo,
@@ -88,10 +88,6 @@
 		.proimg {
 			text-align: center;
 			padding: 20rpx;
-
-			image {
-				height: 300rpx;
-			}
 		}
 	}
 </style>

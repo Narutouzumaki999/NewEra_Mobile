@@ -19,7 +19,7 @@
 		mounted() {
 			this.content = this.$chgSpecialToText(this.practice.description)
 			this.height =
-				`calc(${uni.getSystemInfoSync().windowHeight}px - 340rpx - ${uni.getSystemInfoSync().windowTop}px)`
+				`calc(${uni.getSystemInfoSync().windowHeight}px - 420rpx)`
 		}
 	}
 </script>

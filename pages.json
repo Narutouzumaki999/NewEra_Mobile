@@ -16,22 +16,22 @@
 		}, {
 			"path": "pages/NewsPreview/NewsPreview",
 			"style": {
-				"navigationBarTitleText": "NEWS"
+				"navigationBarTitleText": ""
 			}
 		}, {
 			"path": "pages/Volunteer/Volunteer",
 			"style": {
-				"navigationBarTitleText": "志愿队"
+				"navigationBarTitleText": "志愿服务队"
 			}
 		}, {
 			"path": "pages/VolunteerPreview/VolunteerPreview",
 			"style": {
-				"navigationBarTitleText": "Volunteer"
+				"navigationBarTitleText": ""
 			}
 		}, {
 			"path": "pages/Practice/Practice",
 			"style": {
-				"navigationBarTitleText": "实践所汇总"
+				"navigationBarTitleText": "文明实践所"
 			}
 		}, {
 			"path": "pages/PracticePreview/PracticePreview",
@@ -42,18 +42,33 @@
 		}, {
 			"path": "pages/ModelRecommend/ModelRecommend",
 			"style": {
-				"navigationBarTitleText": "被推荐人信息"
+				"navigationBarTitleText": "榜样推荐"
 			}
 		}, {
 			"path": "pages/VolunteerHelp/VolunteerHelp",
 			"style": {
-				"navigationBarTitleText": "志愿求助"
+				"navigationBarTitleText": "志愿需求"
+			}
+		}, {
+			"path": "pages/Practice/BasePreview/BasePreview",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/ActivityVolunteer/ActivityVolunteer",
+			"style": {
+				"navigationBarTitleText": "成为志愿者"
+			}
+		}, {
+			"path": "pages/ActivityAdvertising/ActivityAdvertising",
+			"style": {
+				"navigationBarTitleText": "参与活动"
 			}
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "新时代文明中心",
+		"navigationBarTitleText": "新时代文明实践中心",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}

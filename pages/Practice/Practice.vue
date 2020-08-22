@@ -5,7 +5,7 @@
 		</view>
 		<swiper :style="{height: tabsSwiper}" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
 			<swiper-item>
-				<PracticeSummary></PracticeSummary>
+				<PracticeSummary @change-tab="changeTab"></PracticeSummary>
 			</swiper-item>
 			<swiper-item>
 				<PracticeList></PracticeList>
@@ -21,7 +21,7 @@
 	import PracticeSummary from './PracticeSummary.vue'
 	import PracticeList from './PracticeList.vue'
 	import BaseList from './BaseList.vue'
-	
+
 	export default {
 		data() {
 			return {
@@ -29,7 +29,7 @@
 				swiperCurrent: 0,
 				tabsCurrent: 0,
 				tabsList: [{
-					name: '新时代文明中心'
+					name: '新时代文明实践中心'
 				}, {
 					name: '实践所'
 				}, {
@@ -50,10 +50,13 @@
 				this.$refs.uTabs.setFinishCurrent(current)
 				this.swiperCurrent = current
 				this.tabsCurrent = current
+			},
+			changeTab(index) {
+				document.querySelector(`.UEl_${index}`).click()
 			}
 		},
 		mounted() {
-			this.tabsSwiper = `calc(100vh - 44px - ${uni.getSystemInfoSync().windowTop}px)`
+			this.tabsSwiper = `calc(${uni.getSystemInfoSync().windowHeight}px - 80rpx)`
 		},
 		components: {
 			PracticeSummary,

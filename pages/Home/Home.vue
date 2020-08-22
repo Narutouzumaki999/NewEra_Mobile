@@ -1,16 +1,27 @@
 <template>
 	<view class="home">
+		<u-toast ref="uToast" />
 		<view :style="{height: statusBarH + 'px'}"></view>
 		<view class="title">新时代文明实践中心</view>
-		<u-swiper :list="ad_list" img-mode="scaleToFill" height="414" @click="onClickAdvert"></u-swiper>
+		<u-swiper :list="ad_list" img-mode="aspectFill" height="414" @click="onClickAdvert"></u-swiper>
 		<view class="btnlist">
 			<div class="btnarea">
 				<button class="btn1 imgbtn" @click="onClickPractice"></button>
-				<view class="btntitle">实践所汇总</view>
+				<view class="btntitle">文明实践所</view>
 			</div>
 			<div class="btnarea">
 				<button class="btn2 imgbtn" @click="onClickVolunteer"></button>
-				<view class="btntitle">志愿队</view>
+				<view class="btntitle">志愿服务队</view>
+			</div>
+			<div class="btnarea">
+				<button class="btn5 imgbtn" @click="onClickActivityVolunteer"></button>
+				<view class="btntitle">成为志愿者</view>
+			</div>
+		</view>
+		<view class="btnlist">
+			<div class="btnarea">
+				<button class="btn6 imgbtn" @click="onClickActivityAdvertising"></button>
+				<view class="btntitle">参与活动</view>
 			</div>
 			<div class="btnarea">
 				<button class="btn3 imgbtn" @click="onClickModelRecommend"></button>
@@ -18,18 +29,18 @@
 			</div>
 			<div class="btnarea">
 				<button class="btn4 imgbtn" @click="onClickVolunteerHelp"></button>
-				<view class="btntitle">志愿求助</view>
+				<view class="btntitle">志愿需求</view>
 			</div>
 		</view>
 		<view>
 			<u-tabs-swiper ref="uTabs" :list="tabsList" :current="tabsCurrent" @change="tabsChange" :is-scroll="true"
 			 swiper-width="750"></u-tabs-swiper>
+			<swiper :style="{height: tabsSwiper}" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
+				<swiper-item v-for="(item, index) in tabsList" :key="index">
+					<ColumnSwiper :column="item"></ColumnSwiper>
+				</swiper-item>
+			</swiper>
 		</view>
-		<swiper :style="{height: tabsSwiper}" :current="swiperCurrent" @transition="transition" @animationfinish="animationfinish">
-			<swiper-item v-for="(item, index) in tabsList" :key="index">
-				<ColumnSwiper :column="item"></ColumnSwiper>
-			</swiper-item>
-		</swiper>
 	</view>
 </template>
 
@@ -41,7 +52,7 @@
 				statusBarH: uni.getSystemInfoSync().statusBarHeight,
 				tabsSwiper: 0,
 				ad_activity: '',
-				ad_all: '',
+				ad_all: [],
 				ad_list: [],
 				tabsList: [],
 				tabsCurrent: 0,
@@ -49,8 +60,26 @@
 			}
 		},
 		methods: {
-			onClickAdvert(index) {
-				console.log(index)
+			async onClickAdvert(index) {
+				const curActivity = this.ad_all[index]
+				if (curActivity.linkType === "url") window.location.href = curActivity.url
+				else if (curActivity.linkType === "practice") {
+					uni.navigateTo({
+						url: `/pages/PracticePreview/PracticePreview?id=${curActivity.practice}`
+					})
+				} else if (curActivity.linkType === "volunteer") {
+					uni.navigateTo({
+						url: `/pages/VolunteerPreview/VolunteerPreview?id=${curActivity.volunteerTeam}`
+					})
+				} else if (curActivity.linkType === "news") {
+					uni.navigateTo({
+						url: `/pages/NewsPreview/NewsPreview?id=${curActivity.news}`
+					})
+				} else if (curActivity.linkType === "activity") {
+					uni.navigateTo({
+						url: `/pages/PracticePreview/PracticeActivityPreview/PracticeActivityPreview?id=${curActivity.acActivity}&data=0`
+					})
+				}
 			},
 			tabsChange(index) {
 				this.swiperCurrent = index
@@ -86,24 +115,42 @@
 				uni.navigateTo({
 					url: '/pages/VolunteerHelp/VolunteerHelp'
 				})
+			},
+			async onClickActivityVolunteer() {
+				const res = await this.$myRequest({
+					url: '/app/login/checkAuth',
+					data: {
+						sessionId: uni.getStorageSync("SESSION")
+					}
+				})
+				if (res.data.data.isVolunteer === 1) {
+					this.$refs.uToast.show({
+						title: this.$message_noactivityvolunteer,
+						type: 'warning',
+						position: 'bottom'
+					})
+					return
+				}
+				uni.navigateTo({
+					url: '/pages/ActivityVolunteer/ActivityVolunteer'
+				})
+			},
+			onClickActivityAdvertising() {
+				uni.navigateTo({
+					url: '/pages/ActivityAdvertising/ActivityAdvertising'
+				})
 			}
 		},
 		async mounted() {
-			await this.$checkAuth()
-			this.tabsSwiper = `calc(100vh - 80px - 624rpx - ${this.statusBarH}px)`
-			// Get Advert
-			const res_ad_activity = await this.$myRequest({
-				url: '/app/advert/getActivityAdvert'
-			})
-			this.ad_activity = res_ad_activity.data.data.url
+			this.tabsSwiper = `calc(${uni.getSystemInfoSync().windowHeight}px - 80rpx)`
 			const res_ad_all = await this.$myRequest({
 				url: '/app/advert/getAllAdverts'
 			})
 			this.ad_all = res_ad_all.data.data
-			this.ad_list = [{
-				image: this.ad_activity,
-				title: 'activity'
-			}]
+			// this.ad_list = [{
+			// 	image: this.ad_activity,
+			// 	title: 'activity'
+			// }]
 			for (let i = 0; i < this.ad_all.length; i++) {
 				this.ad_list = [...this.ad_list, {
 					image: this.ad_all[i].image,
@@ -165,6 +212,14 @@
 
 				.btn4 {
 					background-image: url(../../static/btn4.png);
+				}
+
+				.btn5 {
+					background-image: url(../../static/launcher2.png);
+				}
+
+				.btn6 {
+					background-image: url(../../static/launcher1.png);
 				}
 
 				.imgbtn {
